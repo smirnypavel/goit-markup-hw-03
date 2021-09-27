@@ -6,10 +6,30 @@
   --white-color: #ffffff;
   --background-footer-color: #2f303a;
   --hover-button: #188ce8;
+  --secondary-backgraund-color: #f5f4fa;
 }
 
 /* вторичный цвет фона #F5F4FA */
 /* основной цвет фона #FFFFFF */
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.link.carent {
+  color: #2196f3;
+}
 
 .link {
   text-decoration: none;
@@ -18,15 +38,7 @@
 .site-nav .link.carent {
   color: var(--accent-color-text);
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  border: 1px solid tomato;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-/* -------------BODY------------------------- */
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -36,7 +48,7 @@ body {
   background-color: #ffffff;
   color: var(--primery-text-color);
 }
-/*----------- логотип ------------------------*/
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -51,71 +63,97 @@ body {
 .logo-footer {
   color: var(--white-color);
 }
-/* ------------site-nav навигация------------- */
+/* -------------header------------- */
+.header {
+}
 
-.site-nav {
+.container-header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+/* header-nav */
+
+.header-nav {
+  display: flex;
+  min-width: 294px;
+  margin-left: 93px;
+  justify-content: space-between;
   font-weight: 500;
   line-height: 1.17;
   list-style: none;
   letter-spacing: 0.02em;
 }
 
-.site-nav .link {
+.header-nav: .header-nav .link {
   color: var(--logo-text-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.header-nav .link:hover,
+.header-nav .link:focus {
   color: var(--accent-color-text);
 }
 
-/* -------------auth-nav авторизация------------ */
+/* link-nav */
 
-.auth-nav {
+.link-nav {
+  display: flex;
+  margin-right: 0px;
+  margin-left: auto;
   list-style: none;
   letter-spacing: 0.02em;
 }
+.link-item:last-child {
+  margin-left: 50px;
+}
 
-.auth-nav .link {
+.link-nav .link {
   color: var(--primery-text-color);
 }
 
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+.link-nav .link:hover,
+.link-nav .link:focus {
   color: var(--accent-color-text);
 }
 
-/* -------------------------hero---------------- */
+/* hero */
 .hero {
-  background-color: var(--background-footer-color);
-  margin-bottom: 94px;
+  background-color: #2f303a;
+}
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  align-items: center;
 }
 
 .hero-title {
+  margin-bottom: 0px;
+  margin-top: 200px;
+  padding: 0px;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
   color: var(--white-color);
-  background-color: #2f303a;
-  text-align: center;
   text-transform: uppercase;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 200px;
-  margin-bottom: 30px;
+  text-align: center;
 }
 .button {
+  border-radius: 4px;
+  border: transparent;
+  align-content: center;
+  min-height: 50px;
+  width: 200px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  padding: 0px;
   font-family: "roboto", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   color: var(--white-color);
   background-color: var(--accent-color-text);
-  min-width: 200px;
-  height: 50px;
-  border-radius: 4px;
-  border: transparent;
 }
 .button:hover,
 .button:focus {
@@ -123,7 +161,7 @@ body {
   background-color: var(--hover-button);
 }
 
-/* ----------------section -------------*/
+/* section */
 
 .section-title {
   color: var(--secondary-text-color);
@@ -137,54 +175,127 @@ body {
   color: var(--secondary-text-color);
 }
 
-/*--------------- Особенности ---------------*/
+/* Особенности */
 
-.peculiarity {
+.feature {
+  display: flex;
+  padding: 0px;
+  margin-top: 94px;
+  margin-bottom: 0px;
   list-style: none;
 }
+.feature-list {
+  margin-top: 0px;
+  width: 270px;
+  text-align: left;
+}
+.feature-list:not(:first-child) {
+  margin-left: 30px;
+}
 
-.peculiarity-title {
+.feature-title {
   color: var(--secondary-text-color);
   text-transform: uppercase;
 }
 
-/* ------------------Чем мы занимаемся----------------- */
+/* Чем мы занимаемся */
 
-.our-work {
-  list-style: none;
+.work {
+  margin-top: 94px;
 }
 
-/* --------------------Наш персонал -------------*/
-.our-personal {
+.our-work {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  padding-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  list-style: none;
+}
+.title-work:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* Наш персонал */
+.section.team {
+  background-color: var(--secondary-backgraund-color);
+  height: 648px;
+}
+.team-box {
+  margin-top: 94px;
+  padding-top: 94px;
+}
+.team-box > .title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.our-team {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
   font-size: 16px;
   line-height: 1.17;
   list-style: none;
 }
-
-.our-personal .title {
+.team-card {
+  text-align: center;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-card:not(:first-child) {
+  margin-left: 30px;
+}
+.our-team .title {
+  margin-top: 30px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   list-style: none;
 }
+.our-team .profession {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
 
-/*------------------ footer --------------*/
-
-.addres {
+/* footer */
+.footer {
+  background-color: var(--background-footer-color);
+}
+.footer-addres {
+  height: 252px;
   font-style: normal;
   color: #ffffff;
-  background-color: var(--background-footer-color);
 }
 
 .addres-list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
   list-style: none;
 }
-
-.addres .link {
+.social:first-child {
+  padding-top: 60px;
+}
+.social:nth-child(2) {
+  margin-top: 20px;
+}
+.social:nth-child(n + 3) {
+  margin-top: 9px;
+}
+.social:last-child {
+  margin-bottom: 60px;
+}
+.footer-addres .link {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ----------------- Portfolio --------------*/
+/*  Portfolio */
 .button-select {
   list-style: none;
 }
