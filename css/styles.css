@@ -323,6 +323,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  background-color: var(--secondary-backgraund-color);
 }
 .select:not(:first-child) {
   margin-left: 8px;
