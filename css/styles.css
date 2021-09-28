@@ -228,9 +228,9 @@ body {
 }
 .section.team {
   background-color: var(--secondary-backgraund-color);
-  height: 648px;
 }
 .team-box {
+  padding-bottom: 94px;
   margin-top: 94px;
   padding-top: 94px;
 }
